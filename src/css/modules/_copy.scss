@@ -1,0 +1,41 @@
+.bkss-copy {
+    color: color('gray', 'medium');
+    line-height: 1.4;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    h2 { margin-bottom: 1em;}
+    h3 { margin-bottom: 1em;}
+
+    p {
+        margin-bottom: 1.4em;
+    }
+
+    a {
+        color: color('blue', 'default');
+
+        &:hover {
+            color: darken(color('blue', 'default'), 20%);
+        }
+    }
+
+    code {
+        display: inline-block;
+        padding: .2em .2em .1em;
+        background-color: #eee;
+        font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+
+        th, td {
+            font-style: normal;
+            padding: .45em;
+            border-bottom: 1px solid color('gray', 'light');
+        }
+
+        th {text-align: left;}
+    }
+}

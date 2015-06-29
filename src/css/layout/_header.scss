@@ -4,11 +4,12 @@
     padding-right: 1em;
     position: relative;
     background-color: color('gray', 'dark');
-    text-align: right;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
 
     &__h {
-        width: 80%;
-        margin: 0;
+        width: 75%;
+        margin: 0 auto;
         padding-top: .5em;
         display: inline-block;
         white-space: nowrap;
@@ -45,7 +46,7 @@
             }
 
             & ~ .bkss-nav {
-                transform: translateX(100%);
+                transform: translateX(0);
             }
         }
     }

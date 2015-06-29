@@ -31,11 +31,14 @@ module.exports = function(grunt) {
         },
 
         autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
             all: {
                 expand: true,
                 flatten: true,
-                src: 'dist/css/*.css',
-                dest: 'dist/css'
+                src: 'dist/template/public/css/*.css',
+                dest: 'dist/template/public/css'
             }
         },
 
@@ -48,8 +51,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'dist/css/',
                     src: ['*.css', '!*.min.css'],
-                    dest: 'dist/css/',
-                    ext: '.min.css'
+                    dest: 'dist/css/'
                 }]
             }
         },
@@ -71,8 +73,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'dist/js',
                     src: ['*.js', '!*.min.js'],
-                    dest: 'dist/js',
-                    ext: '.min.js'
+                    dest: 'dist/js'
                 }]
             }
         },
@@ -84,6 +85,10 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: 'dist/template',
                 dot: true
+            },
+            vendor: {
+                src: 'bower_components/prism/prism.js',
+                dest: 'dist/template/public/js/prism.js'
             }
         },
 

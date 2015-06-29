@@ -2,23 +2,32 @@
 //	VENDOR
 // ****************************
 @import "../../bower_components/normalize.css/normalize";
+@import "../../bower_components/prism/themes/prism-okaidia";
+@import "../../bower_components/bdot/scss/bdot";
 // ****************************
 //	BASE
 // ****************************
 @import "base/globals";         // Variables
 @import "base/mixins";          // all Mixins
 @import "base/elements";        // all element selectors e.g. html, body, a, ul etc.
-@import "base/utility";         // Utilities and Helper
 
 // ****************************
 //	LAYOUT
 // ****************************
 @import "layout/header";
+@import "layout/main";
+@import "layout/footer";
 
 // ****************************
 //	MODULES
 // ****************************
 @import "modules/nav";
+@import "modules/copy";
+@import "modules/heading";
+@import "modules/desc";
+@import "modules/example";
+@import "modules/markup";
+@import "modules/modifier";
 
 // ****************************
 //	COMPONENTS
