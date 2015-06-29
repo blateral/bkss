@@ -14,7 +14,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "devDependencies": {
     "prism": "~1.0.0",
     "bdot": "~0.1.0",
     "normalize.css": "~3.0.3"
