@@ -24,12 +24,77 @@
                     <a href="index.html" data-kss-link-ref="styleguide.homepage"><span class="bkss-nav__menu__i">0</span> <span class="bkss-nav__menu__name">Übersicht</span></a>
                 </li>
                 {{#eachRoot}}
-                <li><a href="section-{{reference}}.html" data-kss-link-ref="{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a></li>
+                <li><a href="section-{{reference}}.html" data-kss-link-ref="{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a>
+                </li>
                 {{/eachRoot}}
             </ul>
+            {{#if homepage}}
+            {{else}}
+            <ul class="bkss-nav__menu  bkss-nav__menu--child" id="js-menu-children">
+            {{#eachSection rootName}}
+            {{#ifDepth 2}}
+            <li><a href="#section-{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a></li>
+            {{/ifDepth}}
+            {{/eachSection}}
+            </ul>
+            {{/if}}
         </nav>
     </header>
 
+    <main class="l-bkss-main">
+        {{#if homepage}}
+        <div class="bkss-copy">
+        {{{homepage}}}
+        </div>
+        {{else}}
+        {{#eachSection rootName}}
+        <section id="section-{{reference}}">
+            {{#ifDepth 1}}
+                <h1 class="bkss-h  bkss-h--1"><span>{{reference}}</span> {{header}}</h1>
+            {{/ifDepth}}
+            {{#ifDepth 2}}
+                <h2 class="bkss-h  bkss-h--2"><span>{{reference}}</span> {{header}}</h2>
+            {{/ifDepth}}
+            {{#ifDepth 3}}
+                <h3 class="bkss-h  bkss-h--3"><span>{{reference}}</span> {{header}}</h3>
+            {{/ifDepth}}
+            {{#if description}}
+            <div class="bkss-copy  bkss-desc">
+                {{{description}}}
+            </div>
+            {{/if}}
+
+            {{#if markup}}
+            <div class="bkss-example">
+                {{{markup}}}
+            </div>
+            <div class="bkss-markup">
+                <pre><code class="language-markup">{{markup}}</code></pre>
+            </div>
+            {{#eachModifier}}
+            <div class="bkss-modifier">
+                <div class="bkss-modifier__head">
+                    <span class="bkss-modifier__head__title">{{name}}</span>
+                    <span class="bkss-modifier__head__desc">{{description}}</span>
+                </div>
+                <div class="bkss-modifier__eample">
+                    {{{markup}}}
+                </div>
+            </div>
+            {{/eachModifier}}
+            {{/if}}
+        </section>
+        {{/eachSection}}
+        {{/if}}
+    </main>
+
+    <footer class="l-footer">
+        Created with <a href="https://github.com/kss-node/kss-node">kss-node</a> and a kss-nodetemplate by <a href="http://blateral.com" class="bdot">
+    &bull;<span>b.lateral - creative agency</span>
+</a>
+    </footer>
+
     <script src="public/js/kss.js" defer></script>
+    <script src="public/js/prism.js" defer></script>
 </body>
 </html>

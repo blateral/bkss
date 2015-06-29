@@ -1,0 +1,21 @@
+.bkss-h {
+    margin-bottom: 1em;
+    border-bottom: 1px dotted color('gray', 'medium');
+    font-family: 'Roboto Condensed', sans-serif;
+    color: color('gray', 'medium');
+
+    span {
+        display: inline-block;
+        color: color('blue', 'default');
+
+        &:after {
+            content: " / ";
+            color: color('gray', 'medium');
+        }
+    }
+
+    &--2,
+    &--3 {
+        margin-top: 2.5em;
+    }
+}

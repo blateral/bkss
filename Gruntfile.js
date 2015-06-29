@@ -84,6 +84,10 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: 'dist/template',
                 dot: true
+            },
+            vendor: {
+                src: 'bower_components/prism/prism.js',
+                dest: 'dist/template/public/js/prism.js'
             }
         },
 

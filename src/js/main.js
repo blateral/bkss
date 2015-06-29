@@ -2,14 +2,20 @@
 (function(d) {
 
     var links = d.querySelectorAll('[data-kss-link-ref]'),
-        root = d.querySelector('[data-kss-ref]');
+        root = d.querySelector('[data-kss-ref]'),
+        children = d.getElementById('js-menu-children');
 
     for (var i = 0; i < links.length; i++) {
-        var current = links[i].getAttribute('data-kss-link-ref');
+        var current = links[i].getAttribute('data-kss-link-ref'),
+            parent;
 
         if(current === root.getAttribute('data-kss-ref')) {
             links[i].classList.add('is-active');
         }
+    }
+
+    if(children) {
+        d.querySelector('a.is-active').parentNode.appendChild(children);
     }
 
 })(document);

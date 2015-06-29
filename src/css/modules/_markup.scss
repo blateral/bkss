@@ -1,0 +1,14 @@
+.bkss-markup {
+    padding-top: .5em;
+    border-top: 1px dotted color('gray', 'light');
+    margin-top: 3.5em;
+    position: relative;
+
+    &:before {
+        content: "Markup";
+        position: absolute;
+        top: -20px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 12px;
+    }
+}

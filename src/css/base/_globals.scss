@@ -3,6 +3,8 @@
 // Example background-color: color('gray', 'dark')
 $colors : (
     'gray': (
+        'light': #ccc,
+        'medium': #333,
         'dark': #30383A
     ),
     'blue': (
@@ -12,9 +14,7 @@ $colors : (
 
 // Breakpoints
 $breakpoints: (
-    'medium': '(min-width: 40em)',
-    'large': '(min-width:  64em)',
-    'xlarge': '(min-width: 90em)'
+    'xlarge': '(min-width: 100em)'
 );
 
 // Legacy

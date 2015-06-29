@@ -1,0 +1,19 @@
+.bkss-modifier {
+    margin-top: 2em;
+    margin-bottom: 4em;
+
+    &__head {
+        padding-bottom: .5em;
+        margin-bottom: 1.5em;
+        border-bottom: 1px dotted color('gray', 'light');
+        font-family: 'Roboto Condensed', sans-serif;
+        color: color('gray', 'medium');
+        font-size: 14px;
+
+        &__title {
+            margin-right: 1em;
+            display: inline-block;
+            font-weight: bold;
+        }
+    }
+}
