@@ -17,4 +17,25 @@
             color: darken(color('blue', 'default'), 20%);
         }
     }
+
+    code {
+        display: inline-block;
+        padding: .2em .2em .1em;
+        background-color: #eee;
+        font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+
+        th, td {
+            font-style: normal;
+            padding: .45em;
+            border-bottom: 1px solid color('gray', 'light');
+        }
+
+        th {text-align: left;}
+    }
 }
