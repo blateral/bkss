@@ -1,0 +1,21 @@
+// Colors definitions
+// Use it with `color`-Mixin
+// Example background-color: color('gray', 'dark')
+$colors : (
+    'gray': (
+        'dark': #30383A
+    ),
+    'blue': (
+        'default': #2FC3F2
+    )
+);
+
+// Breakpoints
+$breakpoints: (
+    'medium': '(min-width: 40em)',
+    'large': '(min-width:  64em)',
+    'xlarge': '(min-width: 90em)'
+);
+
+// Legacy
+$old-ie: false !default;

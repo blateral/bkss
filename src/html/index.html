@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>b.lateral Living Styleguide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="public/css/kss.css">
+</head>
+<body>
+
+    <header class="l-bkss-header">
+        <h1 class="l-bkss-header__h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, magnam!</h1>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle"></label>
+
+        <nav class="bkss-nav">
+            <ul class="bkss-nav__menu" data-kss-ref="{{rootName}}">
+                <li>
+                    <a href="index.html" data-kss-link-ref="styleguide.homepage"><span class="bkss-nav__menu__i">0</span> <span class="bkss-nav__menu__name">Übersicht</span></a>
+                </li>
+                {{#eachRoot}}
+                <li><a href="section-{{reference}}.html" data-kss-link-ref="{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a></li>
+                {{/eachRoot}}
+            </ul>
+        </nav>
+    </header>
+
+    <script src="public/js/kss.js" defer></script>
+</body>
+</html>
