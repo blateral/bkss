@@ -14,14 +14,14 @@
 <body>
 
     <header class="l-bkss-header">
-        <h1 class="l-bkss-header__h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, magnam!</h1>
+        <h1 class="l-bkss-header__h">Stylguide Title</h1>
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"></label>
 
         <nav class="bkss-nav">
             <ul class="bkss-nav__menu" data-kss-ref="{{rootName}}">
                 <li>
-                    <a href="index.html" data-kss-link-ref="styleguide.homepage"><span class="bkss-nav__menu__i">0</span> <span class="bkss-nav__menu__name">Übersicht</span></a>
+                    <a href="index.html" data-kss-link-ref="styleguide.homepage"><span class="bkss-nav__menu__i">0</span> <span class="bkss-nav__menu__name">Overview</span></a>
                 </li>
                 {{#eachRoot}}
                 <li><a href="section-{{reference}}.html" data-kss-link-ref="{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a>
