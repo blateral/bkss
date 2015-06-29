@@ -3,6 +3,7 @@
     padding: 1em;
     position: absolute;
     left: 0;
+    z-index: 999;
     transform: translateX(-300px);
     top: 50px;
     background-color: color('gray', 'dark');
