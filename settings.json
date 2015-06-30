@@ -6,6 +6,10 @@
         "main": {
             "src": "src/css/main.scss",
             "dist": "dist/template/public/css/kss.css"
+        },
+        "fixture": {
+            "src": "src/css/fixtures/fixture.scss",
+            "dist": "dist/css/fixture.css"
         }
     },
 
