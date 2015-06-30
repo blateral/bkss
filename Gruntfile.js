@@ -26,6 +26,7 @@ module.exports = function(grunt) {
             main: {
                 files: {
                     '<%= settings.css.main.dist %>': '<%= settings.css.main.src %>',
+                    '<%= settings.css.fixture.dist %>': '<%= settings.css.fixture.src %>',
                 }
             }
         },
@@ -117,7 +118,9 @@ module.exports = function(grunt) {
 
         kss: {
             options: {
-                template: 'dist/template'
+                template: 'dist/template',
+                css: '/css/fixture.css',
+                title: 'My KSS Styleguide'
             },
             all: {
                 files: {
