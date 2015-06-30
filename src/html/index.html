@@ -5,16 +5,17 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Stylguide Title</title>
+    <title>{{options.title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="public/css/kss.css">
+    {{{styles}}}
 </head>
 <body>
 
     <header class="l-bkss-header">
-        <h1 class="l-bkss-header__h">Stylguide Title</h1>
+        <h1 class="l-bkss-header__h">{{options.title}}</h1>
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"></label>
 
@@ -96,5 +97,6 @@
 
     <script src="public/js/kss.js" defer></script>
     <script src="public/js/prism.js" defer></script>
+    {{{scripts}}}
 </body>
 </html>
