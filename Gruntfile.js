@@ -116,16 +116,9 @@ module.exports = function(grunt) {
             }
         },
 
-        kss: {
-            options: {
-                template: 'dist/template',
-                css: '/css/fixture.css',
-                title: 'My KSS Styleguide'
-            },
-            all: {
-                files: {
-                    'dist/docs': ['src/css/fixtures']
-                }
+        shell: {
+            kss: {
+                command: './node_modules/kss/bin/kss-node --config kss-config.json'
             }
         },
 
@@ -142,12 +135,12 @@ module.exports = function(grunt) {
 
             scss: {
                 files: '<%= settings.css.scss.src %>',
-                tasks: ['sass', 'autoprefixer', 'kss', 'bs-inject-css']
+                tasks: ['sass', 'autoprefixer', 'shell', 'bs-inject-css']
             },
 
             html: {
                 files: 'src/html/**',
-                tasks: ['copy', 'kss', 'bs-inject-html']
+                tasks: ['copy', 'shell', 'bs-inject-html']
             }
         }
 
@@ -176,7 +169,7 @@ module.exports = function(grunt) {
         browserSync.reload();
     });
 
-    grunt.registerTask('build', ['clean', 'jshint', 'browserify', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'copy', 'clean:build', 'kss']);
-    grunt.registerTask('compile', ['browserify', 'sass', 'autoprefixer', 'copy', 'kss']);
+    grunt.registerTask('build', ['clean', 'jshint', 'browserify', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'copy', 'clean:build', 'shell']);
+    grunt.registerTask('compile', ['browserify', 'sass', 'autoprefixer', 'copy', 'shell']);
     grunt.registerTask('default', ['compile' ,'bs-init', 'watch']);
 };

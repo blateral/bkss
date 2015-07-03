@@ -34,7 +34,7 @@
             <ul class="bkss-nav__menu  bkss-nav__menu--child" id="js-menu-children">
             {{#eachSection rootName}}
             {{#ifDepth 2}}
-            <li><a href="#section-{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a></li>
+            <li><a href="#section-{{reference}}" data-bkss-section-ref="{{reference}}"><span class="bkss-nav__menu__i">{{reference}}</span><span class="bkss-nav__menu__name">{{header}}</span></a></li>
             {{/ifDepth}}
             {{/eachSection}}
             </ul>
@@ -49,7 +49,7 @@
         </div>
         {{else}}
         {{#eachSection rootName}}
-        <section id="section-{{reference}}">
+        <section id="section-{{reference}}" data-bkss-section="{{reference}}">
             {{#ifDepth 1}}
                 <h1 class="bkss-h  bkss-h--1"><span>{{reference}}</span> {{header}}</h1>
             {{/ifDepth}}
