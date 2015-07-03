@@ -1,0 +1,7 @@
+{
+    "source": "src/css",
+    "destination": "dist/docs",
+    "template": "dist/template",
+    "css": [],
+    "title": "Test title"
+}
