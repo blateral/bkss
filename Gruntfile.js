@@ -135,12 +135,12 @@ module.exports = function(grunt) {
 
             scss: {
                 files: '<%= settings.css.scss.src %>',
-                tasks: ['sass', 'autoprefixer', 'kss', 'bs-inject-css']
+                tasks: ['sass', 'autoprefixer', 'shell', 'bs-inject-css']
             },
 
             html: {
                 files: 'src/html/**',
-                tasks: ['copy', 'kss', 'bs-inject-html']
+                tasks: ['copy', 'shell', 'bs-inject-html']
             }
         }
 
