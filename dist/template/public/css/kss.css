@@ -517,7 +517,7 @@ pre > code {
   margin: 0 auto;
   padding: 1em; }
 
-.l-footer {
+.l-bkss-footer {
   max-width: 1100px;
   margin: 5em auto 0;
   padding: 0 1em;
@@ -526,9 +526,9 @@ pre > code {
   font-size: 12px;
   color: #333;
   text-align: right; }
-  .l-footer a {
+  .l-bkss-footer a {
     color: #2FC3F2; }
-    .l-footer a:hover {
+    .l-bkss-footer a:hover {
       color: #0b88b0; }
 
 .bkss-nav {
