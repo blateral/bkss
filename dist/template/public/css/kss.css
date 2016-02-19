@@ -469,6 +469,9 @@ pre[class*="language-"] {
 html {
   font-size: 100%; }
 
+pre > code {
+  background: none !important; }
+
 .l-bkss-header {
   height: 50px;
   padding-left: 1em;
