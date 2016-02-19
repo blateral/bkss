@@ -238,7 +238,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -372,7 +373,6 @@ pre[class*="language-"] {
   -moz-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
 
@@ -469,6 +469,9 @@ pre[class*="language-"] {
 html {
   font-size: 100%; }
 
+pre > code {
+  background: none !important; }
+
 .l-bkss-header {
   height: 50px;
   padding-left: 1em;
@@ -514,7 +517,7 @@ html {
   margin: 0 auto;
   padding: 1em; }
 
-.l-footer {
+.l-bkss-footer {
   max-width: 1100px;
   margin: 5em auto 0;
   padding: 0 1em;
@@ -523,9 +526,9 @@ html {
   font-size: 12px;
   color: #333;
   text-align: right; }
-  .l-footer a {
+  .l-bkss-footer a {
     color: #2FC3F2; }
-    .l-footer a:hover {
+    .l-bkss-footer a:hover {
       color: #0b88b0; }
 
 .bkss-nav {
@@ -539,8 +542,8 @@ html {
           transform: translateX(-300px);
   top: 50px;
   background-color: #30383A;
-  transition: -webkit-transform 0.25s;
-  transition: transform 0.25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
   color: #fff;
   box-sizing: border-box; }
   @media (min-width: 100em) {
@@ -572,11 +575,9 @@ html {
         text-decoration: none;
         border-bottom: 1px dotted #fff;
         text-transform: uppercase; }
-        .bkss-nav__menu li a:hover,
-        .bkss-nav__menu li a.is-active {
+        .bkss-nav__menu li a:hover, .bkss-nav__menu li a.is-active {
           color: #2FC3F2; }
-    .bkss-nav__menu__i,
-    .bkss-nav__menu__name {
+    .bkss-nav__menu__i, .bkss-nav__menu__name {
       display: table-cell; }
     .bkss-nav__menu__i {
       padding-right: 20px; }
@@ -608,7 +609,7 @@ html {
       color: #0b88b0; }
   .bkss-copy code {
     display: inline-block;
-    padding: 0.2em 0.2em 0.1em;
+    padding: .2em .2em .1em;
     background-color: #eee;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
     font-size: 14px;
