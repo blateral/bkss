@@ -1,6 +1,11 @@
 {
   "name": "bkss",
   "version": "0.2.0",
+  "description": "Template for kss-node.",
+  "homepage": "https://github.com/blateral/bkss",
+  "license": "ISC",
+  "author": "Fabian Trinler <f.trinler@gmail.com> (http://fabian-trinler.de)",
+  "keywords": "kss, kss-node, template",
   "repository": {
     "type": "git",
     "url": "https://github.com/blateral/bkss.git"
